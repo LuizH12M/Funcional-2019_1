@@ -26,7 +26,11 @@ choicesList xs = [zx | ys <- subs xs, zx <- perms ys]
 --      listas do mesmo tipo. Não use 'subs' nem 'perms.
 
 isChoice :: Eq a => [a] -> [a] -> Bool
---isChoice [] [] = True
-isChoice xs ys = if xs == aux then True else isChoice xs (tail ys)
-    where aux = head (choices(ys))
+isChoice [] [] = True
+--isChoice (x:xs) (y:ys) = if x == y then True else if xs == ys then True else False
+--isChoice (x:xs) (y:ys) = if a == b then True else isChoice (tail xs) (tail ys)
+  --  where a = head (choices(xs)) 
+    --      b = head (choices(ys))
+isChoice xs ys = [a | ]
+
 
